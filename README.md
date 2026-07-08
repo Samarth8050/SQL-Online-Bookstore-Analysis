@@ -2,100 +2,159 @@
 
 ## Project Overview
 
-This project analyzes an Online Book Store database using SQL.
+This project demonstrates SQL concepts by analyzing an **Online Book Store** database. The database consists of three related tables imported from CSV files.
 
-The project demonstrates practical SQL skills including:
+### Dataset
 
-- SELECT
-- WHERE
-- GROUP BY
-- ORDER BY
-- HAVING
-- JOINS
-- Aggregate Functions
-- Subqueries
-- Business Analysis
+* **Books.csv**
+* **Customers.csv**
+* **Orders.csv**
 
----
+The tables are connected using common columns with the same name and data type:
 
-## Dataset
-
-The project contains three CSV files.
-
-- Books.csv
-- Customers.csv
-- Orders.csv
+* **Book_ID** → Books ↔ Orders
+* **Customer_ID** → Customers ↔ Orders
 
 ---
 
-## Database Schema
+# Database Schema
 
-Books
-Customers
-Orders
+### Books
 
-Relationships
+* Book_ID
+* Title
+* Author
+* Genre
+* Published_Year
+* Price
+* Stock
 
-Books.Book_ID → Orders.Book_ID
+### Customers
 
-Customers.Customer_ID → Orders.Customer_ID
+* Customer_ID
+* Name
+* City
+* Country
 
----
+### Orders
 
-## SQL Concepts Used
-
-✔ Data Filtering
-
-✔ Aggregate Functions
-
-✔ GROUP BY
-
-✔ HAVING
-
-✔ INNER JOIN
-
-✔ LEFT JOIN
-
-✔ Subqueries
-
-✔ Sorting
-
-✔ Business Analysis
+* Order_ID
+* Customer_ID
+* Book_ID
+* Order_Date
+* Quantity
+* Total_Amount
 
 ---
 
-## Business Questions Solved
+# SQL Concepts Used
 
-- Find total revenue
-- Best selling books
-- Top customers
-- Remaining stock
-- Books sold by genre
-- Most expensive books
-- Customer purchase analysis
-- Inventory analysis
+* SELECT
+* WHERE
+* ORDER BY
+* GROUP BY
+* HAVING
+* INNER JOIN
+* LEFT JOIN
+* Aggregate Functions
 
----
-
-## Tools Used
-
-- MySQL
-- MySQL Workbench
-
----
-
-## Files Included
-
-SQL PROJECT.sql
-
-Books.csv
-
-Customers.csv
-
-Orders.csv
+  * SUM()
+  * COUNT()
+  * AVG()
+  * MIN()
+  * MAX()
+* DISTINCT
+* LIMIT
+* COALESCE()
 
 ---
 
-## Author
+# Basic SQL Queries Solved
 
-Samarth Mirajkar
+### 1. Retrieve all books in the Fiction genre.
+
+### 2. Find books published after 1950.
+
+### 3. List all customers from Canada.
+
+### 4. Show orders placed in November 2023.
+
+### 5. Retrieve the total stock of books available.
+
+### 6. Find the details of the most expensive book.
+
+### 7. Show customers who ordered more than one quantity of a book.
+
+### 8. Retrieve all orders where the total amount exceeds $20.
+
+### 9. List all genres available in the Books table.
+
+### 10. Find the book with the lowest stock.
+
+### 11. Calculate the total revenue generated from all orders.
+
+---
+
+# Advanced SQL Queries Solved
+
+### 1. Retrieve the total number of books sold for each genre.
+
+### 2. Find the average price of books in the Fantasy genre.
+
+### 3. List customers who have placed at least two orders.
+
+### 4. Find the most frequently ordered book.
+
+### 5. Show the top three most expensive books in the Fantasy genre.
+
+### 6. Retrieve the total quantity of books sold by each author.
+
+### 7. List the cities where customers spent more than $30.
+
+### 8. Find the customer who spent the most on book orders.
+
+### 9. Calculate the remaining stock after fulfilling all customer orders.
+
+---
+
+# Learning Outcomes
+
+Through this project, I practiced:
+
+* Database creation and table relationships
+* Importing CSV files into MySQL
+* Writing basic and advanced SQL queries
+* Using JOINs to combine multiple tables
+* Performing data aggregation and analysis
+* Solving business-oriented SQL problems
+* Inventory and sales analysis using SQL
+
+---
+
+# Repository Structure
+
+```text
+📁 Online-Book-Store-SQL-Project
+│── Books.csv
+│── Customers.csv
+│── Orders.csv
+│── SQL PROJECT.sql
+```
+
+---
+
+# Tools Used
+
+* MySQL
+* MySQL Workbench
+* SQL
+* Git
+* GitHub
+
+---
+
+# Author
+
+**Samarth Mirajkar**
+
+If you found this project helpful, feel free to ⭐ star the repository.
